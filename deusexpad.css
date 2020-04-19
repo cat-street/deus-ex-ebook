@@ -1,0 +1,270 @@
+.page {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  padding: 2vh 7vw;
+  position: relative;
+  background-color: black;
+}
+
+.centered-block {
+  margin: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.ebook {
+  position: relative;
+  background-color: #161515;
+  border-radius: 20px;
+  border-bottom: 5px ridge #b2c2c2; /* accidental nice effect */
+  min-height: 600px;
+  min-width: 300px;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+/* Decorations and top icons */
+
+.ebook__side-gradient {
+  position: absolute;
+}
+
+.ebook__side-gradient_top,
+.ebook__side-gradient_bottom {
+  height: 100px;
+  width: 100%;
+}
+
+.ebook__side-gradient_top {
+  background-image: linear-gradient(#133333, #161515);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.ebook__side-gradient_bottom {
+  bottom: 0;
+  background-image: linear-gradient(#161515, #133333);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.ebook__side-gradient_left,
+.ebook__side-gradient_right {
+  height: 100%;
+  width: 100px;
+}
+
+.ebook__side-gradient_left {
+  background-image: linear-gradient(to right, #133333, #161515);
+}
+
+.ebook__side-gradient_right {
+  right: 0;
+  background-image: linear-gradient(to left, #133333, #161515);
+}
+
+.ebook__corner-gradient {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.ebook__corner-gradient_top-left {
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(farthest-side at 100% 100%, #161515, #133333);
+  border-top-left-radius: 20px;
+}
+
+.ebook__corner-gradient_top-right {
+  top: 0;
+  right: 0;
+  background-image: radial-gradient(farthest-side at 0% 100%, #161515, #133333);
+  border-top-right-radius: 20px;
+}
+
+.ebook__corner-gradient_bottom-left {
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(farthest-side at 100% 0%, #161515, #133333);
+  border-bottom-left-radius: 20px;
+}
+
+.ebook__corner-gradient_bottom-right {
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(farthest-side at 0% 0%, #161515, #133333);
+  border-bottom-right-radius: 20px;
+}
+
+.ebook__dots-background {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 100%;
+  background-image: radial-gradient(#153939 3%, transparent 3%);
+  background-size: 100px 100px;
+}
+
+.ebook__vertical-borders {
+  position: absolute;
+  border-left: 1px solid #a6c9c9;
+  border-right: 1px solid #a6c9c9;
+  right: 25px;
+  left: 25px;
+  top: 25px;
+  bottom: 25px;
+}
+
+.ebook__icons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 2rem 3rem 0;
+  font-size: 1.2rem !important;
+}
+
+.ebook__icon_book {
+  font-size: 2rem !important;
+}
+
+.ebook__flare {
+  opacity: .05;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -55%;
+  background-color: #fff;
+  transform: skewX(-10deg);
+}
+
+/* Content */
+
+.ebook__content {
+  position: relative;
+  margin: 100px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 1rem #14c1c1, 0 0 1rem #189494, 0 0 1rem #134848;
+}
+
+.article {
+  transition: opacity .3s;
+}
+
+.article__title {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin: 0 0 2.4rem;
+  text-align: center;
+}
+
+.article__subtitle {
+  font-style: italic;
+  margin: 0 0 2rem;
+}
+
+.article__subtitle_no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.article__image {
+  width: 25%;
+  float: right;
+  border-radius: 1rem;
+  margin: 0 0 1rem 2rem;
+  opacity: .5;
+  transition: opacity .3s, box-shadow .3s;
+}
+
+.article__image:hover {
+  opacity: 1;
+  box-shadow: 0 0 .5rem #14c1c1, 0 0 .5rem #189494, 0 0 .5rem #134848;
+}
+
+.article__text {
+  text-align: justify;
+  margin: 0 0 2rem;
+  line-height: 2rem;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.navigation__item {
+  display: inline;
+  padding: 0 .1rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .page {
+    padding: 2vh 1vw;
+  }
+
+  .ebook__content {
+    font-size: 1rem;
+    margin: 80px;
+  }
+
+  .article__title {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .article__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  .article__text {
+    margin-bottom: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  .ebook__icons {
+    font-size: .7rem !important;
+  }
+
+  .ebook__icon_book {
+    font-size: 1.75rem !important;
+  }
+
+  .article__image {
+    width: 32%;
+  }
+}
+
+@media (max-width: 576px) {
+  .ebook__content {
+    font-size: .8rem;
+    margin: 60px;
+  }
+
+  .article__title {
+    font-size: .8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .article__subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .article__text {
+    margin-bottom: 1rem;
+    line-height: 1rem;
+  }
+
+  .article__image {
+    width: 40%;
+  }
+}

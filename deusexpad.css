@@ -6,15 +6,6 @@
   background-color: black;
 }
 
-.centered-block {
-  margin: auto;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-}
-
 .ebook {
   position: relative;
   background-color: #161515;
@@ -24,6 +15,7 @@
   min-width: 300px;
   max-width: 1400px;
   overflow: hidden;
+  margin: auto;
 }
 
 /* Decorations and top icons */
@@ -195,6 +187,11 @@
 
 .navigation {
   text-align: center;
+}
+
+.navigation__list {
+  list-style: none;
+  padding: 0;
 }
 
 .navigation__item {

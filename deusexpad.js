@@ -1,6 +1,5 @@
 const article = document.getElementsByClassName('article');
 const navButton = document.getElementsByClassName('navigation__link');
-let page;
 
 function switchPage(page) {
   for (let i = 0; i < navButton.length; i++) {

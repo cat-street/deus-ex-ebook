@@ -171,7 +171,8 @@
   border-radius: 1rem;
   margin: 0 0 1rem 2rem;
   opacity: .5;
-  transition: opacity .3s, box-shadow .3s;
+  transition: opacity .2s, box-shadow .2s;
+  cursor: pointer;
 }
 
 .article__image:hover {
@@ -205,7 +206,31 @@
   color: #fff;
 }
 
-@media (max-width: 992px) {
+.lightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  cursor: pointer;
+}
+
+.lightbox__item {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.lightbox_hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
   .page {
     padding: 2vh 1vw;
   }
@@ -238,11 +263,13 @@
   }
 
   .article__image {
-    width: 32%;
+    width: 50%;
+    opacity: .8;
+    box-shadow: 0 0 .5rem #14c1c1, 0 0 .5rem #189494, 0 0 .5rem #134848;
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .ebook__content {
     font-size: .8rem;
     margin: 60px;
@@ -263,6 +290,8 @@
   }
 
   .article__image {
-    width: 40%;
+    width: 100%;
+    opacity: .8;
+    box-shadow: 0 0 .5rem #14c1c1, 0 0 .5rem #189494, 0 0 .5rem #134848;
   }
 }

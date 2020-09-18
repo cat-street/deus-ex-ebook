@@ -8,3 +8,5 @@ A personal study project, a responsive ebook simutaling the one from the Deus Ex
 * Transition effects for switching pages
 * Simple JavaScript pagination
 * A lightbox effect for the image
+
+Live version - https://cat-street.github.io/deus-ex-ebook/
